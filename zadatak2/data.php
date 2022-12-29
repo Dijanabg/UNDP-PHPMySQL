@@ -13,16 +13,18 @@ include "model/Poeni.php";
 
 
 session_start();
-$ad = new Admin("admin", "admin", "admin@gmail.com", "admin", "061332152", "admin");
+
 $kb = new KandidatB("Jelena", "Jovanovic", "jeka@gmail.com", "jeka", "064555666", "kandidat", 1);
 $kc = new KandidatC("Marko", "Markovic", "mare@gmail.com", "mare", "064333666", "kandidat", 2);
 $kd = new KandidatD("Petar", "Petrovic", "pele@gmail.com", "pele", "064777888", "kandidat", 3);
-$pr1 = new Predavac("Jovan", "Jovanovic", "jole@gmail.com", "jole", "064111222", "predavac");
+$pr = new Predavac("Jovan", "Jovanovic", "jole@gmail.com", "jole", "064111222", "predavac");
+$pr1 = new Predavac("Jelen", "Jovanovic", "keka@gmail.com", "keka", "064552666", "predavac");
 $pr2 = new Predavac("Uros", "Urosevic", "uki@gmail.com", "urke", "064999888", "predavac");
 $pr3 = new Predavac("Milos", "Milosevic", "miske@gmail.com", "miske", "064999788", "predavac");
+$ad = new Admin("admin", "admin", "admin@gmail.com", "admin", "061332152", "admin");
 
-$nizKorisnika = [$ad, $kb, $kc, $kd, $pr1, $pr2, $pr3];
-$nizPredavaca = [$pr1, $pr2, $pr3];
+$nizKorisnika = [$kb, $kc, $ad, $kd, $pr, $pr1, $pr2, $pr3];
+$nizPredavaca = [$pr, $pr1, $pr2, $pr3];
 
 $oB = new Obuka("Znakovi upozorenja", "1222", "B");
 $oB1 = new Obuka("Znakovi zabrane", "2212", "B");
@@ -30,9 +32,9 @@ $oB3 = new Obuka("Raskrsnice", "1122", "B");
 $oC = new Obuka("Raskrsnice", "3333", "C");
 $oD = new Obuka("D kategorija", "4444", "D");
 
-$oB->setSpisakPredavaca([$pr1]);
-$oB1->setSpisakPredavaca([$pr1]);
-$oB3->setSpisakPredavaca([$pr1]);
+$oB->setSpisakPredavaca([$pr]);
+$oB1->setSpisakPredavaca([$pr]);
+$oB3->setSpisakPredavaca([$pr]);
 $oC->setSpisakPredavaca([$pr2]);
 $oD->setSpisakPredavaca([$pr3]);
 

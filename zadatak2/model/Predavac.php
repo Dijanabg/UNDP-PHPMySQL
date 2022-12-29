@@ -9,7 +9,6 @@ class Predavac extends Korisnik
     public function __construct($ime, $prezime, $email, $sifra, $telefon, $kategorijaKorisnika)
     {
         parent::__construct($ime, $prezime, $email, $sifra, $telefon, $kategorijaKorisnika);
-        $this->nizObuka = array();
     }
 
     public function getIme()

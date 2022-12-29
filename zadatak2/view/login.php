@@ -24,7 +24,6 @@ if (isset($_SESSION["logovani_korisnik"])) {
                     break;
                 } else {
                     echo "Korisnik ne postoji";
-                    break;
                 }
             }
         }

@@ -1,7 +1,7 @@
 <?php
 
 include "controler/controler.php";
-require "data.php";
+include "data.php";
 
 
 if (!isset($_SESSION["logovani_korisnik"])) {
